@@ -13,7 +13,9 @@ function Navbar(props) {
     }
 
     useEffect(() => {
-        if (!localStorage.getItem('token')) {
+        if ( location.pathname !== '/signup' &&  !localStorage.getItem('token')) {
+        
+            console.log("location : ",location.pathname);
             // props.showAlert("Please login to view your notes.","Error","danger");
             toast.error("Please login!");
             navigate("/login");

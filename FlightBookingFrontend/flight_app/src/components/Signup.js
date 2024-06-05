@@ -1,5 +1,5 @@
 import React, { useState,useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import {toast} from 'react-toastify'
 
 export default function Signup(props) {
@@ -68,6 +68,7 @@ export default function Signup(props) {
         </div>
 
         <button type="submit" className="btn btn-primary">Submit</button>
+        <Link to= "/login"> Log IN </Link>
       </form>
     </div>
   )

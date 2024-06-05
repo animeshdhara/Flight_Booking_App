@@ -1,5 +1,5 @@
 import React, { useState,useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import {toast} from 'react-toastify';
 
 export default function Login () {
@@ -59,7 +59,8 @@ export default function Login () {
                     <label htmlFor="password" className="form-label"  >Password</label>
                     <input autoComplete='off' type="password" className="form-control" id="password" name="password" onChange={handleChange} />
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary" style={{marginLeft : '10px'}}>Submit</button>
+                <Link to= "/signup"> Create new account </Link>
             </form>
         </div>
     )
