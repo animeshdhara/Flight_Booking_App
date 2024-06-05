@@ -1,0 +1,73 @@
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+.carousel-item img{
+    height: 600px;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.select{
+    display: inline-block;
+    width: 20vw;
+    padding: 8px;
+    margin: 8px;
+}
+
+.swap{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 8px;
+    width: 40px;
+    cursor: pointer;
+    background-color: rgb(77, 77, 243);
+}
+.swap:hover{
+    background-color: white;
+    border-color: blue;
+}
+
+.arrow{
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.special_deal_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: baseline;
+}
+
+.card{
+    margin: 2rem;
+}
+
+.price{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+.card_time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.time{
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 0.5rem;
+    width: 70px;
+}
