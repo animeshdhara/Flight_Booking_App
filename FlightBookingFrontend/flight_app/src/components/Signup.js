@@ -41,30 +41,30 @@ export default function Signup(props) {
       }
       // setcredential({ email: "", password: ""})
     }
-  }
+  }  
   return (
     <div className='container'>
-      <h2 style={{color:mode === 'dark'?'white':'black'}}>Create an account to use web chat</h2>
+      <h2 >Create an account to use web chat</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="name" className="form-label" style={{color:mode === 'dark'?'white':'black'}}>Name </label>
-          <input type="text" className="form-control" id="name" name="name" aria-describedby="emailHelp" onChange={handleChange} minLength={3} required style={{color:mode==='dark'?'white':'black', backgroundColor:mode==='dark'?'#293340':'white'}}/>
+          <label htmlFor="name" className="form-label" >Name </label>
+          <input type="text" className="form-control" id="name" name="name" aria-describedby="emailHelp" onChange={handleChange} minLength={3} required />
         </div>
 
         <div className="mb-3">
-          <label htmlFor="email" className="form-label" style={{color:mode === 'dark'?'white':'black'}}>Email address</label>
-          <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" onChange={handleChange} required style={{color:mode==='dark'?'white':'black', backgroundColor:mode==='dark'?'#293340':'white'}}/>
-          <div id="emailHelp" className="form-text" style={{color:mode === 'dark'?'white':'black'}}>We'll never share your email with anyone else.</div>
+          <label htmlFor="email" className="form-label" >Email address</label>
+          <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" onChange={handleChange} required />
+          <div id="emailHelp" className="form-text" >We'll never share your email with anyone else.</div>
         </div>
 
         <div className="mb-3">
-          <label htmlFor="password" className="form-label" style={{color:mode === 'dark'?'white':'black'}}>Password</label>
-          <input type="password" className="form-control" id="password" name="password" onChange={handleChange} minLength={5} required style={{color:mode==='dark'?'white':'black', backgroundColor:mode==='dark'?'#293340':'white'}}/>
+          <label htmlFor="password" className="form-label" >Password</label>
+          <input type="password" className="form-control" id="password" name="password" onChange={handleChange} minLength={5} required />
         </div>
 
         <div className="mb-3">
-          <label htmlFor="cpassword" className="form-label" style={{color:mode === 'dark'?'white':'black'}}>Confirm Password</label>
-          <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={handleChange} required style={{color:mode==='dark'?'white':'black', backgroundColor:mode==='dark'?'#293340':'white'}}/>
+          <label htmlFor="cpassword" className="form-label" >Confirm Password</label>
+          <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={handleChange} required />
         </div>
 
         <button type="submit" className="btn btn-primary">Submit</button>
