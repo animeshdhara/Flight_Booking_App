@@ -4,6 +4,7 @@ import com.springjwt.Error.DuplicateFlightFoundException;
 import com.springjwt.Error.FlightNotFoundException;
 import com.springjwt.entities.Flight;
 import com.springjwt.repositories.FlightRepository;
+import com.springjwt.requests.FlightRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,21 +20,23 @@ public class FlightServiceImpl implements FlightService{
     private FlightRepository flightRepository;
 
     @Override
-    public Flight saveFlight(Flight flight) throws DuplicateFlightFoundException {
+    public Flight saveFlight(FlightRequest request) throws DuplicateFlightFoundException {
 
-        List<Flight> flights = flightRepository.findByArrivalCity(flight.getArrivalCity());
+//        List<Flight> flights = flightRepository.findByArrivalCity(flight.getArrivalCity());
 
 
-        for(Flight fl : flights){
-            if(Objects.equals(fl.getArrivalDate(), flight.getArrivalDate())
-                    && Objects.equals(fl.getArrivalTime(), flight.getArrivalTime())
-                    && Objects.equals(fl.getDepartureCity(), flight.getDepartureCity())
-                    && Objects.equals(fl.getDepartureTime(), flight.getDepartureTime())
-                    && Objects.equals(fl.getDepartureDate(), flight.getDepartureDate()))
-            {
-                throw  new DuplicateFlightFoundException("FLight with same attributes already exists.");
-            }
-        }
+//        for(Flight fl : flights){
+//            if(Objects.equals(fl.getArrivalDate(), flight.getArrivalDate())
+//                    && Objects.equals(fl.getArrivalTime(), flight.getArrivalTime())
+//                    && Objects.equals(fl.getDepartureCity(), flight.getDepartureCity())
+//                    && Objects.equals(fl.getDepartureTime(), flight.getDepartureTime())
+//                    && Objects.equals(fl.getDepartureDate(), flight.getDepartureDate()))
+//            {
+//                throw  new DuplicateFlightFoundException("FLight with same attributes already exists.");
+//            }
+//        }
+
+        Flight flight = new Flight(request);
 
         return flightRepository.save(flight);
     }

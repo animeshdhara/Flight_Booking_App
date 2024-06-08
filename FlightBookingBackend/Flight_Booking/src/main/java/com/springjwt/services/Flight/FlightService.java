@@ -4,11 +4,12 @@ package com.springjwt.services.Flight;
 import com.springjwt.Error.DuplicateFlightFoundException;
 import com.springjwt.Error.FlightNotFoundException;
 import com.springjwt.entities.Flight;
+import com.springjwt.requests.FlightRequest;
 
 import java.util.List;
 
 public interface FlightService {
-    Flight saveFlight(Flight flight) throws DuplicateFlightFoundException;
+    Flight saveFlight(FlightRequest flight) throws DuplicateFlightFoundException;
 
     List<Flight> fetchFlights();
 

@@ -3,6 +3,7 @@ package com.springjwt.controllers;
 import com.springjwt.Error.DuplicateFlightFoundException;
 import com.springjwt.Error.FlightNotFoundException;
 import com.springjwt.entities.Flight;
+import com.springjwt.requests.FlightRequest;
 import com.springjwt.services.Flight.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,9 +18,8 @@ public class FlightController {
     private FlightService flightService;
 
     @PostMapping("/flight/add")
-    public Flight saveFlight(@RequestBody Flight flight) throws DuplicateFlightFoundException {
-
-        return flightService.saveFlight(flight);
+    public Flight saveFlight(@RequestBody FlightRequest request) throws DuplicateFlightFoundException {
+        return flightService.saveFlight(request);
     }
 
     @GetMapping("/flight/getall")
